@@ -9,8 +9,8 @@ export default class VerifyTokenUseCase {
     }
 
     try{
-      verify(token,auth.signature);
-    }catch{
+      verify(token.split(" ")[1],auth.signature);
+    }catch(e){
       throw new Unauthorized("Invalid JWT.");
     }
   }

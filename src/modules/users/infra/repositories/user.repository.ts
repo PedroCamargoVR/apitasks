@@ -17,8 +17,8 @@ export class UserRepository extends MongoRepository<UserEntity> implements IUser
   }
 
   async getUserById(idUser: ObjectId): Promise<IUserModel | null> {
-    return await  this.findOneBy({
-      id: idUser
+    return await this.findOneBy({
+      _id: idUser
     });
   }
 

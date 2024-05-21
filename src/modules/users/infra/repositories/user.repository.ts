@@ -22,8 +22,8 @@ export class UserRepository extends MongoRepository<UserEntity> implements IUser
     });
   }
 
-  async getUserByEmail(emailUser: string): Promise<IUserModel[] | null> {
-    return await  this.findBy({
+  async getUserByEmail(emailUser: string): Promise<IUserModel | null> {
+    return await  this.findOneBy({
       email: emailUser
     });
   }

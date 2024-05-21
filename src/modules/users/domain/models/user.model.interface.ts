@@ -10,6 +10,12 @@ export type UserModel = {
 }
 
 export default interface IUserModel extends IEntity<UserModel>{
+  id: ObjectId;
+  name: string;
+  email: string;
+  password: string;
+  role: number;
+
   get getId(): ObjectId,
   get getName(): string,
   get getEmail(): string,

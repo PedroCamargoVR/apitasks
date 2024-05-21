@@ -4,7 +4,7 @@ import express from "express";
 import 'express-async-errors';
 import mainRouter from "./router";
 import { AppDataSource } from "./infra/data/data-source";
-import { httpErros } from "./infra/middlewares/http-error.middleware";
+import { httpErrosMiddleware } from "./shared/middlewares/http-error.middleware";
 
 const app = express();
 
@@ -19,7 +19,7 @@ AppDataSource.initialize()
 
 app.use(mainRouter);
 
-app.use(httpErros);
+app.use(httpErrosMiddleware);
 
 app.listen("3000", () => {
   console.log(`Application started on port 3000`);

@@ -1,7 +1,7 @@
 import { ObjectId } from "mongodb";
 import { IUserRepository } from "../../domain/repositories/user.repository.interface";
-import { BadRequest } from "../../../../infra/http-error/bad-request";
-import { TargetNotFound } from "../../../../infra/http-error/target-not-found";
+import { BadRequest } from "../../../../shared/http-error/bad-request";
+import { TargetNotFound } from "../../../../shared/http-error/target-not-found";
 
 export default class DeleteUserUseCase {
 

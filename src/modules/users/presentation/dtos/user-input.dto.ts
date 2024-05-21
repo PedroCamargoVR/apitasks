@@ -1,5 +1,5 @@
 
-type UserInputProps = {
+interface UserInputProps {
   name: string;
   email: string;
   password: string;
